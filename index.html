@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+  /*CSS LAYOUT*/
+  * {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #73A9AD;
+}
+  
+sub {
+border-bottom: 1px solid black;
+padding-bottom: px;
+}
+  
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+.card{
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+ .collapsible {
+
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  display: none;
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  
+  <h2>Hayden Walton</h2>
+  <sub>Programmer</sub>
+
+   
+  
+      
+  </div>
+    
+            <h2>Contacts</h2>
+      <p>Email:Enquiry@haydenwalton.co.uk</p>
+      
+     <a href="https://www.linkedin.com/in/hayden-walton-87440617a/">Linkden Profile</a>
+      <h2>Portfolio Page</h2>
+      <p>See all my work here throughout the years:</p>
+       <br>
+
+  <button type="button" class="collapsible">2020</button>
+  <div class="content">
+        <h2>Unfair Pacman</h2>
+      <h5>Completed December 2020</h5>
+
+      <p>Simp</p>
+ 
+</div>
+       <button type="button" class="collapsible">2021</button>
+  <div class="content">
+ 
+</div>    
+  <button type="button" class="collapsible">2022</button>
+      <div class="content">
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
